@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+  revelation:
+    image: sevtech:latest
+    restart: always
+    ports:
+    - "25565:25565"
+    volumes:
+      - type: bind
+        source: /docker/sevtech
+        target: /data
