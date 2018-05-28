@@ -1,6 +1,6 @@
 version: '3.2'
 services:
-  revelation:
+  sevtech:
     image: sevtech:latest
     restart: always
     ports:
