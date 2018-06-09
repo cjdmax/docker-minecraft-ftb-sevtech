@@ -7,6 +7,8 @@ cd /data
 cp -rf /tmp/ftb/* .
 echo "eula=true" > eula.txt
 
+cp -rf /tmp/overrides/* .
+
 if [[ ! -e server.properties ]]; then
     cp /tmp/server.properties .
 fi

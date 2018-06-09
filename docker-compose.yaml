@@ -1,6 +1,7 @@
 version: '3.2'
 services:
   sevtech:
+    build: .
     image: sevtech:latest
     restart: always
     ports:
@@ -9,3 +10,6 @@ services:
       - type: bind
         source: /docker/sevtech
         target: /data
+      - type: bind
+        source: ./overrides
+        target: /tmp/overrides
