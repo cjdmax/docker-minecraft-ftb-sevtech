@@ -6,13 +6,13 @@ MAINTAINER example@example.com
 
 # manual upgrades only chaps
 # when you upgrade, you are responsible for removing the duplicate mods from your ./mods folder on your volume.
-ENV VERSION=3.0.7
+ENV VERSION=3.0.8
 
 RUN apt-get update && apt-get install -y wget unzip
 RUN adduser --disabled-password --home=/data --uid 1234 --gecos "minecraft user" minecraft
 
 RUN mkdir /tmp/ftb && cd /tmp/ftb && \
-  wget -c https://media.forgecdn.net/files/2560/178/SevTech_Ages_Server_${VERSION}.zip -O sevtech.zip && \
+  wget -c https://media.forgecdn.net/files/2570/735/SevTech_Ages_Server_${VERSION}.zip -O sevtech.zip && \
 	unzip sevtech.zip && \
 	chown -R minecraft /tmp/ftb && \
 	bash /tmp/ftb/Install.sh
